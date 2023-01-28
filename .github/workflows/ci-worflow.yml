@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set-up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - run: npm install
+      - run: npm run build
+      - name: Deploy
+        uses:
+          crazy-max/ghaction-github-pages@v3
+        with: 
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_FINE_GRAINED_TOKEN }}
