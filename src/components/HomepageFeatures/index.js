@@ -4,38 +4,38 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/hello_bear_homepage.svg').default,
+    title: 'Connect',
+    Svg: require('@site/static/img/dark_icon.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        We strive to foster a nation-wide community of computing students in Canada for 
+        sharing resources, hosting events, and all around supporting one another
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Inspire',
     Svg: require('@site/static/img/globe_bear_homepage.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        We hope to spark other passionate individuals to create societies of their own to 
+        support their local communities and inspire innovation
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Support',
     Svg: require('@site/static/img/love_bear_homepage.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        This repository of club resources serves to help computing clubs who are just starting out, 
+        are looking for ideas, or want to collaborate with others across the country
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, imgSrc, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
